@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--核心配置文件 -->
+<mapper namespace="com.pcy.mapper.UserMapper">
+
+    <select id="getAllUser" resultType="com.pcy.pojo.User">
+        select * from bills.user
+    </select>
+
+    <select id="getUserById" parameterType="Integer" resultType="com.pcy.pojo.User">
+        select * from bills.user where id = #{id}
+    </select>
+
+    <insert id="addUser" parameterType="com.pcy.pojo.User">
+        insert into bills.user(id, username, loginname, pwd, sex)
+        values(#{id},#{username},#{loginname},#{pwd},#{sex})
+    </insert>
+
+    <insert id="addUser2" parameterType="map">
+        insert into bills.user(id, pwd)
+        values(#{userid},#{password})
+    </insert>
+
+    <delete id="deleteUserByName" parameterType="String">
+        delete from bills.user where username = #{username}
+    </delete>
+
+    <update id="UpdateUser" parameterType="com.pcy.pojo.User">
+        update bills.user set username = #{username} where id = #{id}
+    </update>
+
+    <select id="getUserLike1" parameterType="String" resultType="com.pcy.pojo.User">
+        select * from bills.user where username like "%"#{value}"%"
+    </select>
+
+    <select id="getUserLike2" parameterType="String" resultType="com.pcy.pojo.User">
+        select * from bills.user where username like CONCAT('%',#{value},'%')
+    </select>
+
+    <select id="getUserByManyCase" parameterType="map" resultType="com.pcy.pojo.User">
+        select * from bills.user
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+
+            <if test="username != ''">
+                and username = #{username}
+            </if>
+
+            <if test="loginname != ''">
+                and loginname = #{loginname}
+            </if>
+
+            <if test="pwd != ''">
+                and pwd = #{pwd}
+            </if>
+
+            <if test="sex != ''">
+                and sex = #{sex}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addManyUser" parameterType="java.util.List">
+        insert into bills.user(id, username, loginname, pwd, sex)
+        values
+        <foreach collection="users" item="user" index="index" separator="," >
+            (
+            #{user.id},
+            #{user.username},
+            #{user.loginname},
+            #{user.pwd},
+            #{user.sex}
+            )
+        </foreach>
+    </insert>
+</mapper>
