@@ -5,15 +5,24 @@
 <!--核心配置文件 -->
 <mapper namespace="com.pcy.mapper.UserMapper">
 
-    <select id="getAllUser" resultType="com.pcy.pojo.User">
+    <resultMap id="userMap" type="com.pcy.pojo.User2">
+        <!--可以只转不一样的字段-->
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="loginname" property="account"/>
+        <result column="pwd" property="password"/>
+        <result column="username" property="username"/>
+    </resultMap>
+
+    <select id="getAllUser" resultType="User">
         select * from bills.user
     </select>
 
-    <select id="getUserById" parameterType="Integer" resultType="com.pcy.pojo.User">
+    <select id="getUserById" parameterType="Integer" resultMap="userMap">
         select * from bills.user where id = #{id}
     </select>
 
-    <insert id="addUser" parameterType="com.pcy.pojo.User">
+    <insert id="addUser" parameterType="User">
         insert into bills.user(id, username, loginname, pwd, sex)
         values(#{id},#{username},#{loginname},#{pwd},#{sex})
     </insert>
@@ -27,19 +36,19 @@
         delete from bills.user where username = #{username}
     </delete>
 
-    <update id="UpdateUser" parameterType="com.pcy.pojo.User">
+    <update id="UpdateUser" parameterType="User">
         update bills.user set username = #{username} where id = #{id}
     </update>
 
-    <select id="getUserLike1" parameterType="String" resultType="com.pcy.pojo.User">
+    <select id="getUserLike1" parameterType="String" resultType="User">
         select * from bills.user where username like "%"#{value}"%"
     </select>
 
-    <select id="getUserLike2" parameterType="String" resultType="com.pcy.pojo.User">
+    <select id="getUserLike2" parameterType="String" resultType="User">
         select * from bills.user where username like CONCAT('%',#{value},'%')
     </select>
 
-    <select id="getUserByManyCase" parameterType="map" resultType="com.pcy.pojo.User">
+    <select id="getUserByManyCase" parameterType="map" resultType="User">
         select * from bills.user
         <where>
             <if test="id != null">

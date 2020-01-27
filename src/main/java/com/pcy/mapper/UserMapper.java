@@ -1,6 +1,7 @@
 package com.pcy.mapper;
 
 import com.pcy.pojo.User;
+import com.pcy.pojo.User2;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -12,7 +13,7 @@ public interface UserMapper {
     //1.curd基本操作
     List<User> getAllUser();
 
-    User getUserById(int id);
+    User2 getUserById(int id);
 
     Integer addUser(User user);
 

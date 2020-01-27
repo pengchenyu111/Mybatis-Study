@@ -3,16 +3,17 @@ package com.pcy.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.ibatis.type.Alias;
 
+/**
+ * 用来演示resultMap的作用
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Alias("User")//mybatis类型别名
-public class User {
+public class User2 {
     private int id;
     private String username;
-    private String loginname;
-    private String pwd;
+    private String account;
+    private String password;
     private String sex;
 }

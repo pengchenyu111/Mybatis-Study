@@ -2,8 +2,10 @@ package com.pcy.dao;
 
 import com.pcy.mapper.UserMapper;
 import com.pcy.pojo.User;
+import com.pcy.pojo.User2;
 import com.pcy.utils.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -12,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 public class UserMapperTest {
+
+    static Logger logger = Logger.getLogger(UserMapperTest.class);
 
     @Test
     public void getAllUserTest(){
@@ -34,9 +38,10 @@ public class UserMapperTest {
 
     @Test
     public void getOneUserTest(){
+        logger.info("开始查找一个用户");
         SqlSession sqlSession = MybatisUtil.getSqlSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        User user1 = userMapper.getUserById(1);
+        User2 user1 = userMapper.getUserById(1);
         System.out.println(user1);
         sqlSession.close();
     }
