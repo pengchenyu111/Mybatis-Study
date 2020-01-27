@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pcy.mapper.BillMapper">
+
+    <!--多对一：法一：通过结果连接，较简单-->
+    <select id="getAllBills1" resultMap="BillMap1">
+        select *
+        from bills,billtype
+        where bills.typeid = billtype.id
+    </select>
+
+    <resultMap id="BillMap1" type="Bill">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="billtime" column="billtime"/>
+        <result property="price" column="price"/>
+        <result property="remark" column="remark"/>
+        <association property="billType" javaType="BillType">
+            <id property="id" column="typeid"/>
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+
+    <!--多对一：法二：通过子查询，较复杂，主要是要把其他的查询在写一遍-->
+    <select id="getAllBills2" resultMap="BillMap2">
+        select * from bills
+    </select>
+
+    <resultMap id="BillMap2" type="Bill">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="billtime" column="billtime"/>
+        <result property="price" column="price"/>
+        <result property="remark" column="remark"/>
+        <association property="billType" column="typeid" javaType="BillType" select="getBillTypeById"/>
+    </resultMap>
+
+    <select id="getBillTypeById" parameterType="int" resultType="BillType">
+        select * from bills.billtype where id = #{typeid}
+    </select>
+
+</mapper>

@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--核心配置文件 -->
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <!--核心配置文件 -->
 <mapper namespace="com.pcy.mapper.UserMapper">
 
-    <resultMap id="userMap" type="com.pcy.pojo.User2">
-        <!--可以只转不一样的字段-->
-        <id column="id" property="id"/>
-        <result column="username" property="username"/>
-        <result column="loginname" property="account"/>
-        <result column="pwd" property="password"/>
-        <result column="username" property="username"/>
-    </resultMap>
+<resultMap id="userMap" type="com.pcy.pojo.User2">
+    <!--可以只转不一样的字段-->
+    <id column="id" property="id"/>
+    <result column="username" property="username"/>
+    <result column="loginname" property="account"/>
+    <result column="pwd" property="password"/>
+    <result column="username" property="username"/>
+</resultMap>
 
-    <select id="getAllUser" resultType="User">
+<select id="getAllUser" resultType="User">
         select * from bills.user
     </select>
 
-    <select id="getUserById" parameterType="Integer" resultMap="userMap">
+<select id="getUserById" parameterType="Integer" resultMap="userMap">
         select * from bills.user where id = #{id}
     </select>
 
-    <insert id="addUser" parameterType="User">
+<insert id="addUser" parameterType="User">
         insert into bills.user(id, username, loginname, pwd, sex)
         values(#{id},#{username},#{loginname},#{pwd},#{sex})
     </insert>
 
-    <insert id="addUser2" parameterType="map">
+<insert id="addUser2" parameterType="map">
         insert into bills.user(id, pwd)
         values(#{userid},#{password})
     </insert>
 
-    <delete id="deleteUserByName" parameterType="String">
+<delete id="deleteUserByName" parameterType="String">
         delete from bills.user where username = #{username}
     </delete>
 
-    <update id="UpdateUser" parameterType="User">
+<update id="UpdateUser" parameterType="User">
         update bills.user set username = #{username} where id = #{id}
     </update>
 
-    <select id="getUserLike1" parameterType="String" resultType="User">
+<select id="getUserLike1" parameterType="String" resultType="User">
         select * from bills.user where username like "%"#{value}"%"
     </select>
 
-    <select id="getUserLike2" parameterType="String" resultType="User">
+<select id="getUserLike2" parameterType="String" resultType="User">
         select * from bills.user where username like CONCAT('%',#{value},'%')
     </select>
 
-    <select id="getUserByManyCase" parameterType="map" resultType="User">
-        select * from bills.user
-        <where>
-            <if test="id != null">
-                and id = #{id}
-            </if>
+<select id="getUserByManyCase" parameterType="map" resultType="User">
+    select * from bills.user
+    <where>
+        <if test="id != null">
+            and id = #{id}
+        </if>
 
-            <if test="username != ''">
-                and username = #{username}
-            </if>
+        <if test="username != ''">
+            and username = #{username}
+        </if>
 
-            <if test="loginname != ''">
-                and loginname = #{loginname}
-            </if>
+        <if test="loginname != ''">
+            and loginname = #{loginname}
+        </if>
 
-            <if test="pwd != ''">
-                and pwd = #{pwd}
-            </if>
+        <if test="pwd != ''">
+            and pwd = #{pwd}
+        </if>
 
-            <if test="sex != ''">
-                and sex = #{sex}
-            </if>
-        </where>
-    </select>
+        <if test="sex != ''">
+            and sex = #{sex}
+        </if>
+    </where>
+</select>
 
-    <insert id="addManyUser" parameterType="java.util.List">
-        insert into bills.user(id, username, loginname, pwd, sex)
-        values
-        <foreach collection="users" item="user" index="index" separator="," >
-            (
-            #{user.id},
-            #{user.username},
-            #{user.loginname},
-            #{user.pwd},
-            #{user.sex}
-            )
-        </foreach>
-    </insert>
+<insert id="addManyUser" parameterType="java.util.List">
+    insert into bills.user(id, username, loginname, pwd, sex)
+    values
+    <foreach collection="users" item="user" index="index" separator="," >
+        (
+        #{user.id},
+        #{user.username},
+        #{user.loginname},
+        #{user.pwd},
+        #{user.sex}
+        )
+    </foreach>
+</insert>
 
-    <select id="getUserByLimit" parameterType="map" resultType="User">
+<select id="getUserByLimit" parameterType="map" resultType="User">
         select * from bills.user limit #{startIndex},#{pageSize}
     </select>
-    <select id="getUserByRowBounds" resultType="User">
+<select id="getUserByRowBounds" resultType="User">
         select * from bills.user
     </select>
 </mapper>

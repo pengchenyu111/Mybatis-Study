@@ -56,6 +56,9 @@
     </environments>
 
     <mappers>
+        <mapper resource="./mapper/BillMapper.xml"/>
+        <mapper resource="./mapper/BillTypeMapper.xml"/>
+        <mapper resource="./mapper/BillType2Mapper.xml"/>
         <mapper resource="./mapper/UserMapper.xml"/>
     </mappers>
 </configuration>
