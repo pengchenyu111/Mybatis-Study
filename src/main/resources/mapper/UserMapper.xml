@@ -86,4 +86,11 @@
             )
         </foreach>
     </insert>
+
+    <select id="getUserByLimit" parameterType="map" resultType="User">
+        select * from bills.user limit #{startIndex},#{pageSize}
+    </select>
+    <select id="getUserByRowBounds" resultType="User">
+        select * from bills.user
+    </select>
 </mapper>

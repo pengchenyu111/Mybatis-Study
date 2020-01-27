@@ -4,6 +4,7 @@ import com.pcy.mapper.UserMapper;
 import com.pcy.pojo.User;
 import com.pcy.pojo.User2;
 import com.pcy.utils.MybatisUtil;
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -181,6 +182,63 @@ public class UserMapperTest {
             System.out.println(one);
         }
         sqlSession.commit();
+        sqlSession.close();
+    }
+
+    /**
+     * 分页,若是需要课了解分页插件  mybatis PageHelper
+     * 网址：https://pagehelper.github.io/docs/howtouse/
+     */
+    @Test
+    public void getUserByLimit(){
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        Map<String,Object> map = new HashMap<String, Object>();
+        map.put("startIndex",0);
+        map.put("pageSize",3);
+        List<User> allUser = userMapper.getUserByLimit(map);
+        for (User one : allUser) {
+            System.out.println(one);
+        }
+        sqlSession.close();
+    }
+
+    /**
+     * 分页:通过rowbounds，即Java面向对象的特点来做
+     */
+    @Test
+    public void getUserByRowBounds(){
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        RowBounds rowBounds = new RowBounds(0, 2);
+        List<User> userList = sqlSession.selectList("com.pcy.mapper.UserMapper.getUserByRowBounds",null,rowBounds);
+        for (User one : userList) {
+            System.out.println(one);
+        }
+        sqlSession.close();
+    }
+
+    /**
+     * 使用注解开发
+     */
+    @Test
+    public void getUserByZhuJie(){
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        List<User> allUser = userMapper.getAllUserByZhuJie();
+        for (User one : allUser) {
+            System.out.println(one);
+        }
+        sqlSession.close();
+    }
+    /**
+     * 使用注解开发
+     */
+    @Test
+    public void getUserById2(){
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        User user = userMapper.getUserById2(2);
+        System.out.println(user);
         sqlSession.close();
     }
 }

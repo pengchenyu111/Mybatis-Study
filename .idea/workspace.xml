@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbfd7edf-c432-468f-8f57-92acc1fb440c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/User2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcy/utils/MybatisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcy/utils/MybatisUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pcy/dao/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pcy/dao/UserMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pcy/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pcy/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pcy/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pcy/pojo/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/pcy/dao/UserMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/pcy/dao/UserMapperTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,6 +93,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
@@ -116,39 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.getOneUserTest">
-    <configuration name="UserMapperTest.addManyUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis_study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pcy.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.pcy.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
-      <option name="METHOD_NAME" value="addManyUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.getAllUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis_study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pcy.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.pcy.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
-      <option name="METHOD_NAME" value="getAllUserTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserMapperTest.getUserById2">
     <configuration name="UserMapperTest.getOneUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
@@ -165,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTest.getUserByManyCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.getUserById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
         <pattern>
@@ -175,13 +137,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.pcy.dao" />
       <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
-      <option name="METHOD_NAME" value="getUserByManyCase" />
+      <option name="METHOD_NAME" value="getUserById2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTest.getUserLike2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.getUserByLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
         <pattern>
@@ -191,7 +153,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.pcy.dao" />
       <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
-      <option name="METHOD_NAME" value="getUserLike2" />
+      <option name="METHOD_NAME" value="getUserByLimit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.getUserByRowBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pcy.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pcy.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="getUserByRowBounds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.getUserByZhuJie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pcy.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pcy.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="getUserByZhuJie" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -199,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.getUserById2" />
+        <item itemvalue="JUnit.UserMapperTest.getUserByZhuJie" />
+        <item itemvalue="JUnit.UserMapperTest.getUserByRowBounds" />
+        <item itemvalue="JUnit.UserMapperTest.getUserByLimit" />
         <item itemvalue="JUnit.UserMapperTest.getOneUserTest" />
-        <item itemvalue="JUnit.UserMapperTest.getAllUserTest" />
-        <item itemvalue="JUnit.UserMapperTest.addManyUser" />
-        <item itemvalue="JUnit.UserMapperTest.getUserByManyCase" />
-        <item itemvalue="JUnit.UserMapperTest.getUserLike2" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580049176110</updated>
       <workItem from="1580049183898" duration="14357000" />
-      <workItem from="1580103012147" duration="8749000" />
+      <workItem from="1580103012147" duration="13563000" />
     </task>
     <servers />
   </component>

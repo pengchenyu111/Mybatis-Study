@@ -3,6 +3,7 @@ package com.pcy.mapper;
 import com.pcy.pojo.User;
 import com.pcy.pojo.User2;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,6 @@ public interface UserMapper {
 
     //2.模糊查询写法一
     List<User> getUserLike1(String value);
-
     //2.模糊查询写法二
     List<User> getUserLike2(String value);
 
@@ -37,4 +37,15 @@ public interface UserMapper {
     //4.批量增加,动态sql
     Integer addManyUser(@Param("users") List<User> users);
 
+    //5.实现分页
+    List<User> getUserByLimit(Map<String,Object> map);
+    //5.实现分页:rowbounds
+    List<User> getUserByRowBounds();
+
+    //6.使用注解开发
+    @Select("select * from bills.user")
+    List<User> getAllUserByZhuJie();
+    //如果参数是个对象，可以不用@Param
+    @Select("select * from bills.user where id = #{userId}")
+    User getUserById2(@Param("userId") int id);
 }
