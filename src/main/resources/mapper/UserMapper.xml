@@ -11,6 +11,9 @@
             flushInterval="60000"
             size="512"
             readOnly="true"/>
+    
+    <!--使用ehcache 缓存-->
+    <!--<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>-->
 
 <resultMap id="userMap" type="com.pcy.pojo.User2">
     <!--可以只转不一样的字段-->
