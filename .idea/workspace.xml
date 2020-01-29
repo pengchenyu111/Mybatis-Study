@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbfd7edf-c432-468f-8f57-92acc1fb440c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/BillMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/BillType2Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/BillTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/BillType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/Bills.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/Bills2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcy/pojo/BillsType2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/Bill2Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BillMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BillType2Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BillTypeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/pcy/dao/BillTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pcy/dao/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pcy/dao/UserMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pcy/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pcy/mapper/UserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/pcy/dao/UserMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/pcy/dao/UserMapperTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +65,14 @@
         <item name="bills: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="billtype: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@101.37.173.73" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bills: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -135,23 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BillTest.getBillTypeById2">
-    <configuration name="BillTest.getBillTypeById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis_study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pcy.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.pcy.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.BillTest" />
-      <option name="METHOD_NAME" value="getBillTypeById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserMapperTest.updateUserBySet">
     <configuration name="BillTest.getBillTypeById1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
@@ -184,22 +166,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillTest.getBills2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis_study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pcy.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.pcy.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.BillTest" />
-      <option name="METHOD_NAME" value="getBills2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BillTest.getBills3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
@@ -216,13 +182,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserMapperTest.getUserByChoose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pcy.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pcy.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="getUserByChoose" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.updateUserBySet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pcy.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pcy.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="updateUserBySet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.updateUserBySet" />
+        <item itemvalue="JUnit.UserMapperTest.getUserByChoose" />
         <item itemvalue="JUnit.BillTest.getBillTypeById2" />
         <item itemvalue="JUnit.BillTest.getBillTypeById1" />
         <item itemvalue="JUnit.BillTest.getBills3" />
-        <item itemvalue="JUnit.BillTest.getBills2" />
-        <item itemvalue="JUnit.BillTest.getBillTypeById" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +250,8 @@
       <option name="presentableId" value="Default" />
       <updated>1580049176110</updated>
       <workItem from="1580049183898" duration="14357000" />
-      <workItem from="1580103012147" duration="21521000" />
+      <workItem from="1580103012147" duration="22148000" />
+      <workItem from="1580290775837" duration="3463000" />
     </task>
     <servers />
   </component>

@@ -241,4 +241,40 @@ public class UserMapperTest {
         System.out.println(user);
         sqlSession.close();
     }
+
+    /**
+     * 动态SQL之choose
+     * 会像switch-case一样满足一个条件就不执行其他条件了
+     */
+    @Test
+    public void getUserByChoose(){
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        Map map = new HashMap();
+//        map.put("usernmae","小明");
+//        map.put("loginname","xiaoming");
+        List<User> userList = userMapper.getUserByChoose(map);
+        for (User user : userList) {
+            System.out.println(user);
+        }
+        sqlSession.close();
+    }
+
+    /**
+     * 动态SQL之set
+     * 会像switch-case一样满足一个条件就不执行其他条件了
+     */
+    @Test
+    public void updateUserBySet(){
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        Map map = new HashMap();
+        map.put("username","张辽");
+//        map.put("loginname","xiaoming");
+        map.put("id",6);
+        Integer rows = userMapper.updateUserBySet(map);
+        System.out.println("受影响的行数为： " + rows);
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }

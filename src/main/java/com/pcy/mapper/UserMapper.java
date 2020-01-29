@@ -48,4 +48,10 @@ public interface UserMapper {
     //如果参数是个对象，可以不用@Param
     @Select("select * from bills.user where id = #{userId}")
     User getUserById2(@Param("userId") int id);
+
+    //7.动态SQL之Choose ====> 相当于switch-case
+    List<User> getUserByChoose(Map map);
+
+    //7.动态SQL之set ====>跟where差不多的区别
+    Integer updateUserBySet(Map map);
 }

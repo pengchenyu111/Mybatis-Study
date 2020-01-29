@@ -93,4 +93,24 @@
 <select id="getUserByRowBounds" resultType="User">
         select * from bills.user
     </select>
+
+    <select id="getUserByChoose" parameterType="map" resultType="User">
+        select * from user
+        <where>
+            <choose>
+                <when test="username != null">username = #{username}</when>
+                <when test="loginname != null">loginname =#{loginname}</when>
+                <otherwise>1=1</otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <update id="updateUserBySet" parameterType="map">
+        update user
+        <set>
+            <if test="username != null">username = #{username}</if>
+            <if test="loginname != null">loginname = #{loginname}</if>
+        </set>
+        where id = #{id}
+    </update>
 </mapper>
