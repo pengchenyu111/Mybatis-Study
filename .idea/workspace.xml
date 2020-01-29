@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cbfd7edf-c432-468f-8f57-92acc1fb440c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcy/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pcy/dao/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pcy/dao/UserMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pcy/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pcy/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/pcy/dao/UserMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/pcy/dao/UserMapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.updateUserBySet">
+  <component name="RunManager" selected="JUnit.UserMapperTest.getAllUserTest">
     <configuration name="BillTest.getBillTypeById1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
@@ -166,7 +162,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillTest.getBills3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.getAllUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis_study" />
       <extension name="coverage">
         <pattern>
@@ -175,8 +171,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.pcy.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.BillTest" />
-      <option name="METHOD_NAME" value="getBills3" />
+      <option name="MAIN_CLASS_NAME" value="com.pcy.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="getAllUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.getAllUserTest" />
         <item itemvalue="JUnit.UserMapperTest.updateUserBySet" />
         <item itemvalue="JUnit.UserMapperTest.getUserByChoose" />
         <item itemvalue="JUnit.BillTest.getBillTypeById2" />
         <item itemvalue="JUnit.BillTest.getBillTypeById1" />
-        <item itemvalue="JUnit.BillTest.getBills3" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +247,7 @@
       <updated>1580049176110</updated>
       <workItem from="1580049183898" duration="14357000" />
       <workItem from="1580103012147" duration="22148000" />
-      <workItem from="1580290775837" duration="3463000" />
+      <workItem from="1580290775837" duration="3837000" />
     </task>
     <servers />
   </component>

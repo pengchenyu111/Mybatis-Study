@@ -5,6 +5,13 @@
         <!--核心配置文件 -->
 <mapper namespace="com.pcy.mapper.UserMapper">
 
+    <!--开启二级缓存-->
+    <!--二级缓存的详细解析：https://mybatis.org/mybatis-3/zh/sqlmap-xml.html#cache-->
+    <cache eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
+
 <resultMap id="userMap" type="com.pcy.pojo.User2">
     <!--可以只转不一样的字段-->
     <id column="id" property="id"/>
